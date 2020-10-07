@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="userps">
+        <properties>
+<!--            &lt;!&ndash; H2 필수 속성 &ndash;&gt;-->
+<!--            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>-->
+<!--            <property name="javax.persistence.jdbc.user" value="sa"/>-->
+<!--            <property name="javax.persistence.jdbc.password" value=""/>-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/C:/Users/evo/Database/h2/study"/>-->
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+
+            <!-- MS-SQL 필수 속성 -->
+<!--            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>-->
+<!--            <property name="javax.persistence.jdbc.user" value="root"/>-->
+<!--            <property name="javax.persistence.jdbc.password" value="nervous00"/>-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:my://localhost:3306;databaseName=test"/>-->
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>-->
+
+            <!-- MYSQL 필수 속성 -->
+            <!-- 접근할 DB  -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <!-- DB 사용자 정보 -->
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <!-- password -->
+            <property name="javax.persistence.jdbc.password" value="nervous00"/>
+            <!-- url setting -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/test"/>
+            <!--  localhost, mysql 기본 포트인 3306포트 사용, test 데이터베이스 사용 -->
+
+
+
+            <!-- Oracle 필수 속성 -->
+            <!--<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="javax.persistence.jdbc.user" value="study"/>
+            <property name="javax.persistence.jdbc.password" value="study"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.111.222:1521:orcl"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>-->
+
+            <!-- Tibero 필수 속성 -->
+            <!--<property name="javax.persistence.jdbc.driver" value="com.tmax.tibero.jdbc.TbDriver"/>
+            <property name="javax.persistence.jdbc.user" value="study"/>
+            <property name="javax.persistence.jdbc.password" value="study"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:tibero:this:@192.168.111.222:8629:tibero"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>-->
+
+            <!-- PostgreSQL 필수 속성 -->
+            <!--<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="study"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.111.222:5432/postgres"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>-->
+
+            <!-- 옵션 -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.jdbc.batch_size" value="10"/>
+            <property name="hibernate.hbm2ddl.auto" value="none" />
+        </properties>
+    </persistence-unit>
+</persistence>
